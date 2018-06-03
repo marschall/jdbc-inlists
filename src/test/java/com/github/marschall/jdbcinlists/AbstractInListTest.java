@@ -25,8 +25,12 @@ abstract class AbstractInListTest {
 
   @Test
   void selectInlist() {
-    var values = this.jdbcTemplate.queryForList(QUERY, String.class, new SqlArrayValue("smallint", 3, 5));
+    var values = this.jdbcTemplate.queryForList(this.getQuery(), String.class, new SqlArrayValue("smallint", 3, 5));
     assertEquals(Arrays.asList("Value_00003", "Value_00005"), values);
+  }
+
+  String getQuery() {
+    return QUERY;
   }
 
 }

@@ -3,11 +3,11 @@ package com.github.marschall.jdbcinlists;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import com.github.marschall.jdbcinlists.configuration.PostgresConfiguration;
+import com.github.marschall.jdbcinlists.configuration.SqlServerConfiguration;
 
-@SpringJUnitConfig(classes = PostgresConfiguration.class)
+@SpringJUnitConfig(classes = SqlServerConfiguration.class)
 @Sql("classpath:common-schema.sql")
 @Sql("classpath:common-data.sql")
-class PostgresInListTest extends AbstractInListTest {
+class SqlServerInListTest extends AbstractInListTest {
 
 }
