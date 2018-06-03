@@ -37,6 +37,7 @@ abstract class AbstractInListTest {
     assertEquals(Arrays.asList("Value_00003", "Value_00005"), values);
   }
 
+  @Test
   void plainJdbc() throws SQLException {
     try (var connection = this.dataSource.getConnection();
          var preparedStatement = connection.prepareStatement(this.getQuery())) {
