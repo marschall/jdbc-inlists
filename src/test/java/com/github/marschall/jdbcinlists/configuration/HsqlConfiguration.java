@@ -17,7 +17,7 @@ public class HsqlConfiguration {
             .generateUniqueName(true)
             .setType(HSQL)
             .setScriptEncoding("UTF-8")
-            .addScript("common-schema.sql")
+            .addScript("hsql-schema.sql")
             .addScript("common-data.sql")
             .build();
   }
