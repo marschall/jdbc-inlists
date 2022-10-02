@@ -1,0 +1,4 @@
+CREATE TABLE inlist_test_table (
+  id  NUMERIC(5) NOT NULL PRIMARY KEY,
+  val VARCHAR(50) NOT NULL
+);
