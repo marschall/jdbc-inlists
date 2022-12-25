@@ -1,13 +1,14 @@
 package com.github.marschall.jdbcinlists;
 
+import org.junit.jupiter.api.Disabled;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import com.github.marschall.jdbcinlists.configuration.HsqlConfiguration;
+import com.github.marschall.jdbcinlists.configuration.HanaConfiguration;
 
-@SpringJUnitConfig(classes = HsqlConfiguration.class)
-class HsqlInListTest extends AbstractInListTest {
+@Disabled("HANA does not support arrays")
+@SpringJUnitConfig(classes = HanaConfiguration.class)
+class HanaInListTest extends AbstractInListTest {
 
-  // https://stackoverflow.com/questions/50665451/hsqldb-any-array-function-not-working
   private static final String QUERY = """
                                       SELECT val
                                       FROM inlist_test_table

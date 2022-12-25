@@ -20,10 +20,12 @@ import com.github.marschall.jdbcinlists.configuration.TransactionManagerConfigur
 @SpringJUnitConfig(classes = {TransactionManagerConfiguration.class, JdbcConfiguration.class})
 abstract class AbstractInListTest {
 
-  private static final String QUERY = "SELECT val "
-          + "FROM inlist_test_table "
-          + "WHERE id = ANY(?) "
-          + "ORDER BY id";
+  private static final String QUERY = """
+                                      SELECT val
+                                      FROM inlist_test_table
+                                      WHERE id = ANY(?)
+                                      ORDER BY id
+                                      """;
 
   @Autowired
   private DataSource dataSource;
